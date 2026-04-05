@@ -83,8 +83,6 @@ export class AuthService {
       },
     });
 
-    console.log({ email, password, name, userExits });
-
     return true;
   }
 
