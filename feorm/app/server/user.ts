@@ -1,14 +1,9 @@
 import { api } from "./api"
 import type { MeUser } from "../types"
+import { getMessageFromAny, unwrapContent } from "../common/getMessage"
 
 const ENDPOINT = "users"
 
-function getMessageFromAny(data: any) {
-  const msg = data?.message
-  if (Array.isArray(msg)) return msg.join(", ")
-  if (typeof msg === "string") return msg
-  return null
-}
 
 export const UserService = {
   me: async (): Promise<MeUser> => {

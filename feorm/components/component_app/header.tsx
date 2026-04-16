@@ -75,10 +75,12 @@ export default function Header() {
 
                 <nav className="hidden items-center gap-1 md:flex">
                     <NavLink href="/" label="Trang chủ" />
-                    <NavLink href="/images" label="Danh sách ảnh" />
-                    <NavLink href="/images/created" label="Ảnh đã tạo" />
+                    <NavLink href="/images" label="Trang chi tiết" />
+                    <span className="mx-2 h-5 w-px bg-white/15" />
+                    <span className="text-sm font-semibold text-[#f5efe6]/80">Quản lý ảnh:</span>
+                    <NavLink href="/users/me" label="Thông tin user" />
                     <NavLink href="/saved" label="Ảnh đã lưu" />
-                    <NavLink href="/users/me" label="Thông tin cá nhân" />
+                    <NavLink href="/images/created" label="Ảnh đã tạo" />
                 </nav>
 
                 <div className="ml-auto flex items-center gap-2">

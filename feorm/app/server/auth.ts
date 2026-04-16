@@ -1,5 +1,7 @@
 import { api } from "./api";
 import type { TApiResponse } from "../types";
+import { unwrapContent } from "../common/getMessage"
+
 
 
 const ENDPOINT = "auth";
@@ -9,12 +11,7 @@ export type AuthTokens = {
     refreshToken?: string;
 };
 
-function unwrapContent<T>(raw: unknown): T {
-    if (raw && typeof raw === "object" && "content" in (raw as any)) {
-        return (raw as any).content as T;
-    }
-    return raw as T;
-}
+
 
 function getMessageFromAny(data: any) {
     const msg = data?.message;
